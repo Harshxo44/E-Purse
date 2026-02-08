@@ -1,5 +1,10 @@
 import { useExpenses } from "../context/ExpenseContext";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { useState } from "react";
@@ -18,7 +23,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
-import { CATEGORIES, formatCurrency, searchExpenses } from "../utils/expenseUtils";
+import {
+  CATEGORIES,
+  formatCurrency,
+  searchExpenses,
+} from "../utils/expenseUtils";
 import {
   Plus,
   Trash2,
@@ -28,7 +37,7 @@ import {
   Download,
   Receipt,
 } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import type { Expense } from "../context/ExpenseContext";
 import {
   Table,
@@ -41,7 +50,11 @@ import {
 import { Badge } from "../components/ui/badge";
 import { Checkbox } from "../components/ui/checkbox";
 import { Calendar } from "../components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "../components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../components/ui/popover";
 
 export function Expenses() {
   const { expenses, addExpense, updateExpense, deleteExpense, currency } =
@@ -50,7 +63,10 @@ export function Expenses() {
   const [editingExpense, setEditingExpense] = useState<Expense | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [dateRange, setDateRange] = useState<{ from: Date | undefined; to: Date | undefined }>({
+  const [dateRange, setDateRange] = useState<{
+    from: Date | undefined;
+    to: Date | undefined;
+  }>({
     from: undefined,
     to: undefined,
   });
@@ -73,7 +89,7 @@ export function Expenses() {
 
   if (selectedCategory !== "all") {
     filteredExpenses = filteredExpenses.filter(
-      (e) => e.category === selectedCategory
+      (e) => e.category === selectedCategory,
     );
   }
 
@@ -295,7 +311,7 @@ export function Expenses() {
                     <Select
                       value={formData.recurringFrequency}
                       onValueChange={(
-                        value: "daily" | "weekly" | "monthly" | "yearly"
+                        value: "daily" | "weekly" | "monthly" | "yearly",
                       ) =>
                         setFormData({
                           ...formData,
@@ -348,7 +364,10 @@ export function Expenses() {
               />
             </div>
 
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <Select
+              value={selectedCategory}
+              onValueChange={setSelectedCategory}
+            >
               <SelectTrigger>
                 <Filter className="w-4 h-4 mr-2" />
                 <SelectValue placeholder="Filter by category" />
@@ -413,9 +432,7 @@ export function Expenses() {
       {/* Expenses Table */}
       <Card>
         <CardHeader>
-          <CardTitle>
-            All Expenses ({filteredExpenses.length})
-          </CardTitle>
+          <CardTitle>All Expenses ({filteredExpenses.length})</CardTitle>
         </CardHeader>
         <CardContent>
           {filteredExpenses.length === 0 ? (

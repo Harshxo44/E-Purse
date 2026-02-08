@@ -1,5 +1,10 @@
 import { useExpenses } from "../context/ExpenseContext";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Label } from "../components/ui/label";
 import {
@@ -9,8 +14,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
-import { Settings as SettingsIcon, Trash2, Download, Upload } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import {
+  Settings as SettingsIcon,
+  Trash2,
+  Download,
+  Upload,
+} from "lucide-react";
+import { toast } from "sonner";
 import { useState } from "react";
 import {
   AlertDialog,
@@ -58,14 +68,14 @@ export function Settings() {
     reader.onload = (e) => {
       try {
         const data = JSON.parse(e.target?.result as string);
-        
+
         if (data.expenses) {
           localStorage.setItem("expenses", JSON.stringify(data.expenses));
         }
         if (data.budgets) {
           localStorage.setItem("budgets", JSON.stringify(data.budgets));
         }
-        
+
         toast.success("Data imported successfully! Refreshing...");
         setTimeout(() => window.location.reload(), 1000);
       } catch (error) {

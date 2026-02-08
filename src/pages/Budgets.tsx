@@ -1,5 +1,10 @@
 import { useExpenses } from "../context/ExpenseContext";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Progress } from "../components/ui/progress";
 import { useState } from "react";
@@ -19,9 +24,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
-import { CATEGORIES, formatCurrency, getBudgetProgress } from "../utils/expenseUtils";
+import {
+  CATEGORIES,
+  formatCurrency,
+  getBudgetProgress,
+} from "../utils/expenseUtils";
 import { Plus, Trash2, Edit, TrendingUp, AlertCircle } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import type { Budget } from "../context/ExpenseContext";
 
 export function Budgets() {
@@ -274,7 +283,13 @@ export function Budgets() {
                       }
                     >
                       {isOverBudget ? (
-                        <>Over by {formatCurrency(Math.abs(progress.remaining), currency)}</>
+                        <>
+                          Over by{" "}
+                          {formatCurrency(
+                            Math.abs(progress.remaining),
+                            currency,
+                          )}
+                        </>
                       ) : (
                         <>{formatCurrency(progress.remaining, currency)} left</>
                       )}

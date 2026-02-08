@@ -1,4 +1,4 @@
-# 💼 E-Purse — Expense & Budget Tracker
+#  E-Purse — Expense & Budget Tracker
 
 E-Purse is a **user-friendly expense and budget tracking web application** built to strengthen my practical understanding of **React** while working on a real-world dashboard-based project.
 
@@ -20,7 +20,7 @@ This project is primarily built to:
 
 ## ✨ Key Features
 
-### 📊 Dashboard
+###  Dashboard
 
 - Clean, modern, and responsive dashboard
 - Monthly overview of expenses
@@ -29,28 +29,28 @@ This project is primarily built to:
 - Recent expenses list
   ![alt text](image.png)
 
-### 💸 Expense Tracking
+###  Expense Tracking
 
 - Add and view expenses
 - Categorize expenses
 - View total and monthly expenses
   ![alt text](image-1.png)
 
-### 📁 Budget Management
+###  Budget Management
 
 - Create and manage budgets
 - Track budget usage
 - Identify budgets that need attention
   ![![alt text](image-4.png)](image-3.png)
 
-### 📈 Analytics
+###  Analytics
 
 - Expense analytics by category
 - Monthly spending insights
 - Visual understanding of expense data
   ![alt text](image-2.png)
 
-### 📤 Data Upload Support
+###  Data Upload Support
 
 - Upload **data files / data sheets**
 - Handle small structured data objects
@@ -58,7 +58,7 @@ This project is primarily built to:
 
 ---
 
-## 🧑‍💻 Tech Stack
+##  Tech Stack
 
 - **React** (Frontend Library)
 - **Vite** (Fast development & build tool)
@@ -68,7 +68,7 @@ This project is primarily built to:
 
 ---
 
-## 🖥️ UI Highlights
+##  UI Highlights
 
 - User-friendly layout
 - Sidebar navigation
@@ -78,7 +78,7 @@ This project is primarily built to:
 
 ---
 
-## 📚 Learning Outcomes
+##  Learning Outcomes
 
 Through this project, I practiced:
 
@@ -95,7 +95,7 @@ Through this project, I practiced:
 
 ```bash
 # Clone the repository
-git clone <your-repo-link>
+https://github.com/Harshxo44/E-Purse
 
 # Navigate to project folder
 cd E-PURSE

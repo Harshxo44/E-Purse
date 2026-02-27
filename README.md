@@ -91,8 +91,8 @@ Through this project, I practiced:
 
 ---
 
-## Demo link https://e-purse.netlify.app/
-
+[## Demo link https://e-purse.netlify.app/
+](https://e-purse.netlify.app/)
 ## ⚙️ Installation & Setup
 
 ```bash
